@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornellion Cinema Club Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>Ornellion Cinema Club</h2>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve your viewing satisfaction!</p>
+        </header>
+        <form id="survey-form">
+            <!--User Information-->
+            <fieldset class="user-information">
+                <label for="name" id="name-label">Name <input type="text" id="name" required placeholder="e.g. Florence Pugh" name="user-name"></label>
+                <label for="email" id="email-label">Email <input type="email" id="email" required placeholder="e.g. name@domain.com" name="user-email"></label>
+                <label for="number" id="number-label">Age (optional) <input type="number" id="number" min="13" max="120" placeholder="Age" name="user-age"></label>
+            </fieldset>
+
+            <!--Survey Questions-->
+            <!--Favourite genre: dropdown-->
+            <fieldset>
+                <label class="genre">What is your favourite genre of film?
+                    <select id="dropdown" name="fav-genre"> 
+                        <option value="">Select your favourite genre</option>
+                        <option value="1">Action</option>
+                        <option value="2">Comedy</option>
+                        <option value="3">Horror</option>
+                        <option value="4">Romance</option>
+                        <option value="4">Thriller</option>
+                        <option value="5">Sci-Fi</option>
+                        <option value="6">Fantasy</option>
+                    </select>
+                </label> 
+            </fieldset>
+            <!--Viewing preference: radio-->
+            <fieldset>
+                <legend>Do you prefer watching films at home or in the cinema?</legend>
+                <div>
+                    <label for="home"><input type="radio" name="viewing-preference" checked id="home" value="home">At home</label>
+                </div>
+                <div>
+                    <label for="cinema"><input type="radio" name="viewing-preference" id="cinema" value="cinema">In the cinema</label>
+                </div>
+                <div>
+                    <label for="both"><input type="radio" name="viewing-preference" id="both" value="both">I like both for different reasons</label>
+                </div>            
+            </fieldset>
+            <!--Favourite snacks: checkbox-->
+            <fieldset>
+                <legend>What snacks do you like to eat at the cinema?</legend>
+                <div>
+                <label for="popcorn"><input type="checkbox" id="popcorn" name="snacks" value="popcorn">
+                Popcorn</label>
+                </div>
+                <div>
+                <label for="sweets"><input type="checkbox" id="sweets" name="snacks" value="sweets">
+                Sweets</label>
+                </div>
+                <div>
+                    <label for="chocolate"><input type="checkbox" id="chocolate" name="snacks" value="chocolate">
+                    Chocolate</label>
+                </div>
+                <div>
+                    <label for="savoury"><input type="checkbox" id="savoury" name="snacks" value="savoury">
+                    Savoury (e.g. hotdogs)</label>
+                </div>
+            </fieldset>
+            <!--Favourite film: text area-->
+            <fieldset>
+                <label for="favourite-film"><div class="fav-film">What is your favourite film and why?</div> 
+                    <textarea id="favourite-film" rows="5" cols="50" placeholder="My favourite film is Eternal Sunshine of a Spotless Mind because..." name="fav-film"></textarea>
+                </label>
+            </fieldset>
+            <!--Submit Button-->
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </main>
+</body>
+</html>
